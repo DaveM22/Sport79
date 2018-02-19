@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # create a new SQLAlchemy object
 db = SQLAlchemy()
-
+#asd
 # Base model that for other models to inherit from
 class Usuario(db.Model, UserMixin):
     __tablename__ = 'usuarios'
