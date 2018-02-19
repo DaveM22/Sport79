@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de stock</title>
+</head>
+<body>
+<div class="container h-100">
+    <br>
+    <h3 class="text-center">{{ titulo }}</h3>
+    <div class="row h-100 justify-content-center align-items-center col-sm-6 col-md-6 no-gutters">
+        <form action="{{ url_for('registrar_stock') }}" method="post" class="form-inline col-12">
+            <div class="form-group">
+            <label for="descripcion" class="col-form-label">Fecha</label>
+            <input class="form-control mx-sm-3" id="fecha" name="fecha" type="date" />
+                         <label class="col-form-label" for="usuario" >Cargado por:</label>
+            <input class="form-control mx-sm-3" id="usuario" type="" step="any" name="usuario" value="{{ current_user.nombre  }}" readonly />
+                        <label for="stock">Cantidad stock</label>
+            <input class="form-control mx-sm-3" type="number" id="stock" min="0" name="stock" value="{{ montototal }}" />
+                <input type="submit" class="btn btn-primary" value="Finalizar" />
+            </div>
+
+        </form>
+   </div>
+</div>
+<br>
+<div class="row h-100 no-gutters">
+    <div class="container col-sm-5 col-md-5">
+        <h3 class="text-center">Seleccione articulos</h3>
+        <table class="table table-responsive-sm">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Agregar</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% for art in articulos %}
+                    <tr>
+                        <td>{{ art.descripcion }}</td>
+                        <td>{{ art.precio_unitario }}</td>
+                        <form action="{{url_for('agregardetalle')}}" method="post" >
+                            <td hidden><input type="text" name="id" value="{{ art.id }}"/></td>
+                            <td><input type="text" class="col-sm-2" name="cantidad"/></td> <td><input type="submit" class="btn btn-primary" value="Agregar"/></td>
+                        </form>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container col-sm-5 col-md-5">
+    <h3 class="text-center">Articulos agregados</h3>
+        <table class="table table-responsive-sm" id="tabla">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Tipo de Accion</th>
+                    <th>Moneda</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in detalles  %}
+                    <tr>
+                        <td>{{ i.detalle_articulo_rel.descripcion }}</td>
+                        <td></td>
+                        <td>$</td>
+                        <td>{{ i.monto }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+
+<script>
+setInterval(function () {
+    $('table#tabla').load("/data.json")
+},500)
+</script>
+</html>

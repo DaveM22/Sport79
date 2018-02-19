@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" data-toggle="modal" data-target="#ModalUsuario">Nuevo usuario</a>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Clave</th>
+            <th>Habilitado</th>
+            <th>Tipo</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for usr in personal %}
+                <tr>
+                <td>{{ usr.id }}</td>
+                <td>{{ usr.nombre }}</td>
+                <td>{{ usr.clave }}</td>
+                <td>{{ usr.habilitado }}</td>
+                <td>
+                    {{ 'Sin Especificar' if usr.usuario_tipo_rel is none else usr.usuario_tipo_rel.descripcion   }}
+                </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal fade" id="ModalUsuario">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Nuevo articulo</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <form action="{{ url_for('registrar_personal') }}" method="post">
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <label>Descripcion</label>
+            <br>
+            <input class="form-control" type="text" name="usuario"/>
+            <label>Precio unitario</label>
+            <input class="form-control" type="text" name="clave" />
+            <label>Habilitado</label>
+            <input class="form-control" type="checkbox" />
+            {% if current_user.is_authenticated and current_user.usuario_tipo_rel.descripcion == 'Administrador' %}
+                div class="container">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seleccione tipo de usuario
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Tipo de usuario</li>
+                  <li>Administrador</li>
+                  <li>Encargado</li>
+                  <li><a href="#">Personal</a></li>
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Nuevo usuario" />
+        </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock</title>
+</head>
+<body style="background: linear-gradient(90deg,#503fbe,#2d2d88);">
+<div class="container">
+<h3><a href="{{ url_for('formulariostock') }}">Nuevo movimiento de stock</a></h3>
+<br>
+  <table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Usuario</th>
+            <th>Monto</th>
+        </tr>
+    </thead>
+      <tbody>
+        {% for i in detalles %}
+            <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.fecha }}</td>
+            <td></td>
+            <td>{{ i.monto_total }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+</table>
+</div>
+
+</body>
+</html>
