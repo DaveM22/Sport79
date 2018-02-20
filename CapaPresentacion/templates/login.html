@@ -6,28 +6,28 @@
 </head>
 <body align="center" style="background: linear-gradient(to right, #8e9eab, #eef2f3);">
 <br>
+<br>
 <div align="center"><h2>LOGIN</h2></div>
 <br>
-<div class="login">
 <br>
-<br>
+<div class="row justify-content-center align-items-center">
 <form action="{{ url_for('login') }}" method="post" >
-    <div class="form-group row offset-4">
-        <label for="usuario" class="col-2 col-form-label">Nombre de usuario:</label>
-            <div class="col-3 col-form-label">
-                <input type="text" class="form-control" name="usuario" id="usuario"/></p>
-            </div>
+
+    <div class="form-group">
+        <label for="usuario">Usuario: </label>
+        <input type="text" class="form-control" name="usuario" id="usuario"/></p>
     </div>
-    <div class="form-group row offset-4">
-        <label for="clave" class="col-2 col-form-label">Clave: </label>
-        <div class="col-3 col-form-label">
+
+    <div class="form-group">
+        <label for="clave">Clave: </label>
         <input type="password" class="form-control" name="clave" id="clave"/></p>
-        </div>
     </div>
-    <div align="center"><button type="submit">Ingresar</button>
-    </div>
-        {{ '' if error is none else error  }}
+
+    <button type="submit">Ingresar</button></p>
+    {{ '' if error is none else error  }}
 </form>
+
 </div>
+
 </body>
 </html>

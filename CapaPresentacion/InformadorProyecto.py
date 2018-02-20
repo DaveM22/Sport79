@@ -47,7 +47,7 @@ def login():
     usuario_registrado = ControladorLocal().validarLogin(usuario,clave)
     if usuario_registrado is False:
             flash('Usuario o contraseña invalidos','error')
-            return render_template('index.html',pagina='login.html',error='ERROR: Credenciales invalidos.')
+            return render_template('index.html',pagina='login.html',error='Credenciales invalidas')
     login_user(usuario_registrado)
     flash('bien logueado')
     return redirect(request.args.get("next") or url_for('index'))
