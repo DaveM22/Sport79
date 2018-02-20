@@ -5,9 +5,9 @@
     <title>Stock</title>
 </head>
 <body style="background: linear-gradient(90deg,#503fbe,#2d2d88);">
-<div class="container">
-<h3><a href="{{ url_for('formulariostock') }}">Nuevo movimiento de stock</a></h3>
 <br>
+<div align="center"><h2>STOCK</h2></div>
+<div class="container">
   <table class="table table-dark table-hover">
     <thead>
         <tr>
@@ -29,6 +29,8 @@
       </tbody>
 </table>
 </div>
-
+<div  align="center">
+<button><a href="{{ url_for('formulariostock') }}">Nuevo movimiento de stock</a></button>
+</div>
 </body>
 </html>
