@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>LOGIN</title>
 </head>
-<body>
+<body align="center">
+<div class="login">
 <form action="{{ url_for('login') }}" method="post">
-    <label>Nombre de usuario</label>
-    <input type="text" class="form-control" name="usuario"/>
-    <label>Clave</label>
-    <input type="password" class="form-control" name="clave" />
+    <label>Nombre de usuario </label><input type="text" class="form-control" name="usuario" />
+    <label>Clave </label><input type="password" class="form-control" name="clave" />
     <button type="submit">Ingresar</button>
 </form>
+</div>
 </body>
 </html>
