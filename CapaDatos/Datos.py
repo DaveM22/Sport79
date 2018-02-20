@@ -16,6 +16,11 @@ class CatalogoArticulos():
         art.setStock(articulo.getStock())
         db.session.commit()
 
+    def eliminar_articulo(self,ideliminar):
+        Articulo.query.filter_by(id = ideliminar).delete()
+        db.session.commit()
+
+
 class CatalogoStocks():
 
     def getAllMovimientosStock(self):

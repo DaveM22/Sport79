@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <title>Stock</title>
 </head>
-<body style="background: linear-gradient(90deg,#503fbe,#2d2d88);">
+<body style="background: linear-gradient(to right, #8e9eab, #eef2f3);">
 <br>
-<div align="center"><h2>STOCK</h2></div>
-<div class="container">
-  <table class="table table-dark table-hover">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Fecha</th>
-            <th>Usuario</th>
-            <th>Monto</th>
-        </tr>
+<div align="center"><h2>Stock Actual</h2></div><br>
+<div class="container h-100" >
+    <table class="table table-dark table-hover">
+    <thead style="border-bottom: 2px solid black; border-top-color: #9fcdff;">
+    <tr class="text-center">
+        <th class="col-xs-1">ID</th>
+        <th>Descripcion</th>
+        <th class="col-xs-3">Precio unitario</th>
+        <th>Cant. Stock</th>
+        <th></th>
+        <th></th>
+    </tr>
     </thead>
-      <tbody>
-        {% for i in detalles %}
-            <tr>
-            <td>{{ i.id }}</td>
-            <td>{{ i.fecha }}</td>
-            <td></td>
-            <td>{{ i.monto_total }}</td>
-            </tr>
+        <tbody>
+        {% for articulo in articulos %}
+            <tr class="text-center">
+           <td class="">{{ articulo.id  }}</td>
+           <td class="">{{ articulo.descripcion }}</td>
+           <td class="">{{ articulo.precio_unitario  }}</td>
+           <td class="">{{ articulo.stock  }}</td>
+            <td><a href="{{url_for('.formularioarticulos',ID=articulo.id)}}">Modificar</a></td>
+                <td><a onclick="return confirm('¿Confirmar el  el articulo seleccionado?')" href="{{ url_for('.eliminararticulo',ID=articulo.id) }}">Eliminar</a></td>
+           </tr>
         {% endfor %}
-      </tbody>
+        </tbody>
 </table>
 </div>
 <div  align="center">
-<button><a href="{{ url_for('formulariostock') }}">Nuevo movimiento de stock</a></button>
+<button><a href=" {{ url_for('formularioarticulos') }}">Cargar Nuevo articulo</a></button>
 </div>
+
+
 </body>
+
+<script>
+    $(function(){
+    // don't cache ajax or content won't be fresh
+    $.ajaxSetup ({
+        cache: false
+    });
+    var ajax_load = "<img src='http://i.imgur.com/pKopwXp.gif' alt='loading...' />";
+
+    // load() functions
+    var loadUrl = "http://fiddle.jshell.net/dvb0wpLs/show/";
+    $("#loadbasic").click(function(){
+        $("#result").html(ajax_load).load(loadUrl);
+    });
+
+// end
+});
+</script>
 </html>
+
+

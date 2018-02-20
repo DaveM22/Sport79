@@ -25,7 +25,6 @@ class Usuario(db.Model, UserMixin):
         self.tipo_id = tipo
 
 
-
 class Tipo_usuario(db.Model):
     __tablename__='tipo_usuario'
     id = db.Column(db.Integer,primary_key=True,autoincrement=True)
@@ -69,9 +68,6 @@ class Articulo(db.Model):
 
     def setStock(self,stock):
         self.stock = stock
-
-
-
 
 
 class MovimientoStock(db.Model):

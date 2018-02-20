@@ -17,6 +17,9 @@ class ControladorLocal():
     def modificar_articulo(self,articulo):
         self.articulosdata.actualizar_articulo(articulo)
 
+    def eliminar_articulo(self,ideliminar):
+        self.articulosdata.eliminar_articulo(ideliminar)
+
     def getAllDetallesSinConfirmar(self):
         return self.detallesdata.getAllDetallesSinConfirmar()
 

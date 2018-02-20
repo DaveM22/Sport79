@@ -13,17 +13,17 @@
         <form action="{{ url_for('registrar_articulo') }}" method="post" class="col-6">
             <div class="form-group">
             <label for="descripcion" class="col-form-label">Descripcion</label>
-            <input class="form-control" id="descripcion" id="descripcion" name="descripcion" value="{{ "" if modificar is none else modificar.descripcion }}"/>
+            <input class="form-control" id="descripcion" id="descripcion" required name="descripcion" value="{{ "" if modificar is none else modificar.descripcion }}"/>
             </div>
 
             <div class="form-group">
                 <label class="col-form-label" for="precio" >Precio unitario</label>
-            <input class="form-control" id="precio" type="number" step="any" name="precio" value="{{ "" if modificar is none else modificar.precio_unitario }}" />
+            <input class="form-control" id="precio" type="number" step="any" required name="precio" value="{{ "" if modificar is none else modificar.precio_unitario }}" />
             </div>
 
             <div class="form-group">
             <label for="stock">Cantidad stock</label>
-            <input class="form-control" type="number" id="stock" min="0" name="stock" value="{{ "" if modificar is none else modificar.stock }}" />
+            <input class="form-control" type="number" id="stock" min="0" required name="stock" value="{{ "" if modificar is none else modificar.stock }}" />
             </div>
 
             <span class="input-group-btn">

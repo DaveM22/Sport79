@@ -59,10 +59,10 @@ def logout():
     return redirect(url_for('hello'))
 
 
-@app.route('/Articulos')
-def articulos():
+@app.route('/Stock')
+def stock():
     articulos = ControladorLocal().getall_articulos()
-    return render_template('index.html',pagina='articulos.html',articulos=articulos)
+    return render_template('index.html',pagina='stock.html',articulos=articulos)
 
 
 @app.route('/FormularioArticulo')
@@ -86,10 +86,15 @@ def registrar_articulo():
     else:
         id = request.form['id']
         artmod = Articulo(descripcion, precio, stock, id)
-        ControladorLocal.modificar_articulo(artmod)
+        ControladorLocal().modificar_articulo(artmod)
 
-    return redirect(url_for('articulos'))
+    return redirect(url_for('stock'))
 
+@app.route('/eliminar_articulo',methods=['GET'])
+def eliminararticulo():
+    id = request.args.get('ID')
+    ControladorLocal().eliminar_articulo(id)
+    return redirect(url_for('stock'))
 
 @app.route('/Personal')
 def personal():
@@ -111,17 +116,17 @@ def registrar_personal():
     return redirect(url_for('personal'))
 
 
-@app.route('/Stock')
-def stock():
+@app.route('/Ventas')
+def ventas():
     detalles = MovimientoStock.query.all()
-    return render_template('index.html', pagina='stock.html', detalles=detalles)
+    return render_template('index.html', pagina='ventas.html', detalles=detalles)
 
-@app.route('/FormularioStock',methods=['GET','POST'])
-def formulariostock():
+@app.route('/FormularioVentas',methods=['GET','POST'])
+def formularioventas():
         articulos = ControladorLocal().getall_articulos()
         detalles = ControladorLocal().getAllDetallesSinConfirmar()
         montototal = ControladorLocal().sumAllDetallesSinConfimrar()
-        return render_template('index.html',pagina='FormularioStock.html',montototal=montototal,articulos=articulos,detalles=detalles,modificar=None,titulo='Nuevo movimiento de stock')
+        return render_template('index.html',pagina='FormularioVentas.html',montototal=montototal,articulos=articulos,detalles=detalles,modificar=None,titulo='Nueva Venta')
 
 @app.route('/RegistrarStock',methods=['GET','POST'])
 def registrar_stock():
@@ -131,7 +136,7 @@ def registrar_stock():
     movstock = MovimientoStock(fecha, montototal)
     id_generado = ControladorLocal().SetMovimientoStock(movstock)
     ControladorLocal().asignarIDDetallesPendientes(id_generado)
-    return redirect(url_for('formulariostock'))
+    return redirect(url_for('formularioventas'))
 
 
 @app.route('/AgregarDetalle',methods=['GET','POST'])
@@ -143,7 +148,7 @@ def agregardetalle():
     detalle = DetalleArticulo(0,id,precio * cantidad)
     db.session.add(detalle)
     db.session.commit()
-    return redirect(url_for('formulariostock'))
+    return redirect(url_for('formularioventas'))
 
 
 if __name__ == '__main__':
