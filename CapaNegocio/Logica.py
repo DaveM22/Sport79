@@ -1,4 +1,4 @@
-from CapaDatos.Datos import CatalogoArticulos,CatalogoDetalles,CatalogoStocks
+from CapaDatos.Datos import CatalogoArticulos,CatalogoDetalles,CatalogoStocks,CatalogoUsuarios
 
 class ControladorLocal():
 
@@ -6,6 +6,8 @@ class ControladorLocal():
         self.articulosdata = CatalogoArticulos()
         self.detallesdata = CatalogoDetalles()
         self.movstockdata = CatalogoStocks()
+        self.catusuarios = CatalogoUsuarios()
+
 
 
     def getall_articulos(self):
@@ -31,3 +33,9 @@ class ControladorLocal():
 
     def SetMovimientoStock(self,movstock):
         return self.movstockdata.setMovimientoStock(movstock)
+
+    def setUsuario(self,usr):
+        self.catusuarios.nuevo_usuario(usr)
+
+    def validarLogin(self,usr,clave):
+        return self.catusuarios.validar_login(usr,clave)

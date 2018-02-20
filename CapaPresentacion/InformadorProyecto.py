@@ -23,7 +23,7 @@ db.create_all(app=app)
 
 
 @app.route('/')
-def hello():
+def index():
     return render_template('index.html',pagina='inicio.html')
 
 @app.route('/Prueba')
@@ -41,22 +41,22 @@ def load_user(id):
 @app.route('/Login',methods=['GET','POST'])
 def login():
     if request.method == 'GET':
-            return render_template('login.html')
+            return render_template('index.html',pagina='login.html')
     usuario = request.form['usuario']
     clave = request.form['clave']
-    usuario_registrado = Usuario.query.filter_by(nombre=usuario,clave=clave).first()
-    if usuario_registrado is None:
+    usuario_registrado = ControladorLocal().validarLogin(usuario,clave)
+    if usuario_registrado is False:
             flash('Usuario o contraseña invalidos','error')
-            return abort(401)
+            return render_template('index.html',pagina='login.html',error='ERROR: Credenciales invalidos.')
     login_user(usuario_registrado)
     flash('bien logueado')
-    return redirect(request.args.get('next') or url_for('prueba'))
+    return redirect(request.args.get("next") or url_for('index'))
 
 
 @app.route('/Logout')
 def logout():
     logout_user()
-    return redirect(url_for('hello'))
+    return redirect(url_for('index'))
 
 
 @app.route('/Stock')
@@ -111,8 +111,7 @@ def registrar_personal():
         tipo = 1
     else:
         tipo = request.form['tipo']
-    db.session.add(Usuario(nombre,clave,habilitado,tipo))
-    db.session.commit()
+    ControladorLocal().setUsuario(Usuario(nombre,clave,habilitado,tipo))
     return redirect(url_for('personal'))
 
 

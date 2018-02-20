@@ -1,4 +1,4 @@
-from CapaDatos.modelos import Articulo,MovimientoStock,DetalleArticulo,db
+from CapaDatos.modelos import Articulo,MovimientoStock,DetalleArticulo,Usuario,db
 
 class CatalogoArticulos():
 
@@ -44,3 +44,15 @@ class CatalogoDetalles():
             det.id_movimientostock = id
         db.session.commit()
 
+class CatalogoUsuarios():
+
+    def nuevo_usuario(self,usr):
+        db.session.add(usr)
+        db.session.commit()
+
+    def validar_login(self,usr,clave):
+        usr = Usuario.query.filter_by(nombre=usr, clave=clave).first()
+        if usr is None:
+            return False
+        else:
+            return True
