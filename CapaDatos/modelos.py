@@ -18,11 +18,14 @@ class Usuario(db.Model, UserMixin):
     tipo_id = db.Column(db.Integer, db.ForeignKey('tipo_usuario.id'), nullable=False)
     usuario_tipo_rel = db.relationship('Tipo_usuario', foreign_keys=tipo_id)
 
-    def __init__(self,nombre,clave,habilitado,tipo):
+    def __init__(self,nombre,habilitado,tipo,clave=None):
         self.nombre = nombre
         self.clave = clave
         self.habilitado = habilitado
         self.tipo_id = tipo
+
+    def setPassFalsa(self,clave):
+        self.clave = clave
 
 
 class Tipo_usuario(db.Model):

@@ -56,6 +56,6 @@ class CatalogoUsuarios():
     def validar_login(self,usr,clave):
         usr = Usuario.query.filter_by(nombre=usr, clave=clave).first()
         if usr is None:
-            return False
+            return None
         else:
-            return True
+            return usr

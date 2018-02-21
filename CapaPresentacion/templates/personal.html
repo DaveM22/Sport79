@@ -8,8 +8,11 @@
 <br>
 <div align="center"><h2>PERSONAL</h2></div>
 <br>
-<div class="container">
-    <table class="table">
+<div class="container-fluid">
+<div row="">
+
+</div>
+    <table class="table table-sm table-dark table-hover">
         <thead>
         <tr>
             <th>ID</th>
@@ -55,7 +58,7 @@
             <label>Clave</label>
             <input class="form-control" type="text" name="clave" />
             <label>Habilitado</label>
-            <input class="form-control" type="checkbox" />
+            <input class="form-control" type="checkbox" name="habilitado" checked/>
             {% if current_user.is_authenticated and current_user.usuario_tipo_rel.descripcion == 'Administrador' %}
                 div class="container">
               <div class="dropdown">

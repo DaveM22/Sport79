@@ -45,9 +45,10 @@ def login():
     usuario = request.form['usuario']
     clave = request.form['clave']
     usuario_registrado = ControladorLocal().validarLogin(usuario,clave)
-    if usuario_registrado is False:
+    if usuario_registrado is None:
             flash('Usuario o contraseña invalidos','error')
             return render_template('index.html',pagina='login.html',error='Credenciales invalidas')
+    usuario_registrado.setPassFalsa('####')
     login_user(usuario_registrado)
     flash('bien logueado')
     return redirect(request.args.get("next") or url_for('index'))
@@ -104,13 +105,20 @@ def personal():
 @app.route('/registrar_personal', methods=['GET', 'POST'])
 def registrar_personal():
     nombre = request.form['usuario']
-    clave = '123'
-    habilitado = True
+    clave = request.form['clave']
+
+    check = request.form.getlist('habilitado')
+
+    if len(check)== 0:
+        habilitado = False
+    else:
+        habilitado = True
+
     if not current_user.is_authenticated:
         tipo = 1
-    else:
-        tipo = request.form['tipo']
-    ControladorLocal().setUsuario(Usuario(nombre,clave,habilitado,tipo))
+
+
+    ControladorLocal().setUsuario(Usuario(nombre=nombre,clave=clave,habilitado=habilitado,tipo=1))
     return redirect(url_for('personal'))
 
 
