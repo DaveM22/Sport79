@@ -6,8 +6,10 @@
 </head>
 <body style="background: linear-gradient(to right, #8e9eab, #eef2f3);"><br>
 <div align="center"><h2>Historial Ventas</h2></div><br>
-<div class="container">
-  <table class="table table-dark table-hover">
+<div class="container-fluid">
+<div class="row">
+
+    <table class="table table-sm table-dark table-hover">
     <thead>
         <tr>
             <th>ID</th>
@@ -27,6 +29,8 @@
         {% endfor %}
       </tbody>
 </table>
+</div>
+
 </div>
 <div  align="center">
 <button><a href="{{ url_for('formularioventas') }}">Nueva Venta</a></button>
