@@ -20,7 +20,6 @@ class CatalogoArticulos():
         Articulo.query.filter_by(id = ideliminar).delete()
         db.session.commit()
 
-
 class CatalogoStocks():
 
     def getAllMovimientosStock(self):
@@ -42,6 +41,10 @@ class CatalogoDetalles():
         detalles = self.getAllDetallesSinConfirmar()
         for det in detalles:
             det.id_movimientostock = id
+        db.session.commit()
+
+    def eliminarDetallesPendientes(self,id):
+        DetalleArticulo.query.filter_by(id_movimientostock=0).delete()
         db.session.commit()
 
 class CatalogoUsuarios():

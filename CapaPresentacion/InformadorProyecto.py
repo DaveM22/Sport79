@@ -87,7 +87,6 @@ def registrar_articulo():
         id = request.form['id']
         artmod = Articulo(descripcion, precio, stock, id)
         ControladorLocal().modificar_articulo(artmod)
-
     return redirect(url_for('stock'))
 
 @app.route('/eliminar_articulo',methods=['GET'])
