@@ -42,17 +42,17 @@
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Nuevo articulo</h4>
+          <h4 class="modal-title">Nuevo Usuario</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <form action="{{ url_for('registrar_personal') }}" method="post">
         <!-- Modal body -->
         <div class="modal-body">
 
-          <label>Descripcion</label>
+          <label>Nombre</label>
             <br>
             <input class="form-control" type="text" name="usuario"/>
-            <label>Precio unitario</label>
+            <label>Clave</label>
             <input class="form-control" type="text" name="clave" />
             <label>Habilitado</label>
             <input class="form-control" type="checkbox" />
