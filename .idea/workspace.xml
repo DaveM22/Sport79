@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9002a8b-1dae-48df-a241-5c381c7a4e98" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Sport79.iml" afterPath="$PROJECT_DIR$/.idea/Sport79.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CapaPresentacion/templates/stock.html" afterPath="$PROJECT_DIR$/CapaPresentacion/templates/stock.html" />
-      <change beforePath="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" afterPath="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" />
     </list>
     <ignored path="C:\Users\David\PycharmProjects\Sport79\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -299,6 +295,14 @@
       <option name="presentableId" value="Default" />
       <updated>1519083230295</updated>
     </task>
+    <task id="LOCAL-00001" summary="ajuste en tablas y ventas en dispositivos moviles muy pequeños">
+      <created>1519175198070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519175198070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -331,6 +335,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajuste en tablas y ventas en dispositivos moviles muy pequeños" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste en tablas y ventas en dispositivos moviles muy pequeños" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
