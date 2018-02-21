@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>asd</title>
+</head>
+
+<body>
+
+<div class="container h-100">
+    <br><br><br>
+    <h1 class="text-center">{{ titulo }}</h1>
+    <div class="row h-100 justify-content-center align-items-center">
+        <form action="{{ url_for('registrar_personal') }}" method="post" class="col-6">
+            <div class="form-group">
+            <label for="descripcion" class="col-form-label">Nombre de usuario</label>
+            <input class="form-control" id="usuario"  required name="usuario" value="{{ "" if modificar is none else modificar.usuario }}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="col-form-label" for="precio" >Clave</label>
+            <input class="form-control" id="clave" type="password" step="any" required name="clave" value="{{ "" if modificar is none else modificar.clave }}" />
+            </div>
+
+            <div class="form-group">
+            <label for="stock">Habilitado</label>
+            <input class="form-control" type="checkbox" id="habilitado" name="habilitado" value="{{ "" if modificar is none else modificar.habilitado }}" />
+            </div>
+
+            <span class="input-group-btn">
+            <input type="submit" class="btn btn-primary" value="Guardar"/>
+            </span>
+            <input type="hidden" value="{{ modo }}" name="modo">
+            <input type="hidden" value="{{ 0 if modificar is none else modificar.id }}" name="id">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

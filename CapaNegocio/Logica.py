@@ -8,8 +8,6 @@ class ControladorLocal():
         self.movstockdata = CatalogoStocks()
         self.catusuarios = CatalogoUsuarios()
 
-
-
     def getall_articulos(self):
         return self.articulosdata.getall_articulos()
 
@@ -36,6 +34,12 @@ class ControladorLocal():
 
     def setUsuario(self,usr):
         self.catusuarios.nuevo_usuario(usr)
+
+    def modificarUsuario(self,usr):
+        self.catusuarios.modificar_usuario(usr)
+
+    def eliminarUsuario(self,ideliminar):
+        self.catusuarios.eliminar_usuario(ideliminar)
 
     def validarLogin(self,usr,clave):
         return self.catusuarios.validar_login(usr,clave)

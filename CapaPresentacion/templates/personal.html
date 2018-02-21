@@ -32,60 +32,19 @@
                 <td>
                     {{ 'Sin Especificar' if usr.usuario_tipo_rel is none else usr.usuario_tipo_rel.descripcion   }}
                 </td>
+                <td><a href="{{url_for('.formulariopersonal',ID=usr.id)}}">Modificar</a></td>
+                <td><a href="{{url_for('.formulariopersonal',ID=usr.id)}}">Eliminar</a></td>
+                <td><a onclick="return confirm('¿Confirmar eliminar el usuario seleccionado?')" href="{{ url_for('.eliminarpersonal',ID=usr.id)}}">Eliminar</a></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
 
+<!-- aca va lo que corte -->
 
-<div class="modal fade" id="ModalUsuario">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Nuevo Usuario</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <form action="{{ url_for('registrar_personal') }}" method="post">
-        <!-- Modal body -->
-        <div class="modal-body">
-
-          <label>Nombre</label>
-            <br>
-            <input class="form-control" type="text" name="usuario"/>
-            <label>Clave</label>
-            <input class="form-control" type="text" name="clave" />
-            <label>Habilitado</label>
-            <input class="form-control" type="checkbox" name="habilitado" checked/>
-            {% if current_user.is_authenticated and current_user.usuario_tipo_rel.descripcion == 'Administrador' %}
-                div class="container">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Seleccione tipo de usuario
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-header">Tipo de usuario</li>
-                  <li>Administrador</li>
-                  <li>Encargado</li>
-                  <li><a href="#">Personal</a></li>
-                </ul>
-              </div>
-            </div>
-            {% endif %}
+<div align="center"><button><a href="{{ url_for('formulariopersonal')}}">Nuevo usuario</a></button></div>
 
 
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <input type="submit" class="btn btn-primary" value="Nuevo usuario" />
-        </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-<div align="center"><button><a href="#" data-toggle="modal" data-target="#ModalUsuario">Nuevo usuario</a></button></div>
 </body>
 </html>

@@ -28,8 +28,8 @@
            <td>{{ articulo.descripcion }}</td>
            <td>{{ articulo.precio_unitario  }}</td>
            <td>{{ articulo.stock  }}</td>
-            <td><a href="{{url_for('.formularioarticulos',ID=articulo.id)}}">Modificar</a></td>
-                <td><a onclick="return confirm('¿Confirmar el  el articulo seleccionado?')" href="{{ url_for('.eliminararticulo',ID=articulo.id) }}">Eliminar</a></td>
+           <td><a href="{{url_for('.formularioarticulos',ID=articulo.id)}}">Modificar</a></td>
+           <td><a onclick="return confirm('¿Confirmar eliminar el articulo seleccionado?')" href="{{ url_for('.eliminararticulo',ID=articulo.id) }}">Eliminar</a></td>
            </tr>
         {% endfor %}
         </tbody>

@@ -8,19 +8,15 @@ from CapaNegocio.Logica import ControladorLocal
 from datetime import date
 import os
 
-
 app = Flask(__name__)
-
 app.debug = True
 app.url_map.add(Rule('/FormularioArticulos',endpoint='FormularioArticulos'))
 app.config.from_object(config)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-
 db.init_app(app)
 db.create_all(app=app)
-
 
 @app.route('/')
 def index():
@@ -31,12 +27,9 @@ def index():
 def prueba():
     return render_template('index.html',pagina='informes.html')
 
-
-
 @login_manager.user_loader
 def load_user(id):
     return Usuario.query.get(int(id))
-
 
 @app.route('/Login',methods=['GET','POST'])
 def login():
@@ -53,18 +46,30 @@ def login():
     flash('bien logueado')
     return redirect(request.args.get("next") or url_for('index'))
 
-
 @app.route('/Logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
-
 
 @app.route('/Stock')
 def stock():
     articulos = ControladorLocal().getall_articulos()
     return render_template('index.html',pagina='stock.html',articulos=articulos)
 
+@app.route('/FormularioPersonal')
+def formulariopersonal():
+    ID = request.args.get('ID')
+    if ID is None:
+        return render_template('index.html', pagina='FormularioPersonal.html', modificar=None, titulo='Nuevo Usuario',modo='Nuevo')
+    else:
+        usr = Usuario.query.get(ID)
+        return render_template('index.html', pagina='FormularioPersonal.html', modificar=usr, titulo='Modificar Usuario', modo='Modificar')
+
+@app.route('/eliminar_personal',methods=['GET'])
+def eliminarpersonal():
+    id = request.args.get('ID')
+    ControladorLocal().eliminarUsuario(id)
+    return redirect(url_for('personal'))
 
 @app.route('/FormularioArticulo')
 def formularioarticulos():
@@ -74,7 +79,6 @@ def formularioarticulos():
     else:
         art = Articulo.query.get(ID)
         return render_template('index.html', pagina='FormularioArticulos.html', modificar=art, titulo='Modificar Articulo',modo='Modificar')
-
 
 @app.route('/registrar_articulo', methods=['POST'])
 def registrar_articulo():
@@ -104,21 +108,19 @@ def personal():
 
 @app.route('/registrar_personal', methods=['GET', 'POST'])
 def registrar_personal():
+    modo = request.form['modo']
     nombre = request.form['usuario']
     clave = request.form['clave']
-
     check = request.form.getlist('habilitado')
-
     if len(check)== 0:
         habilitado = False
     else:
         habilitado = True
-
-    if not current_user.is_authenticated:
-        tipo = 1
-
-
-    ControladorLocal().setUsuario(Usuario(nombre=nombre,clave=clave,habilitado=habilitado,tipo=1))
+    if modo == 'Nuevo':
+        ControladorLocal().setUsuario(Usuario(nombre=nombre,clave=clave,habilitado=habilitado,tipo_id=1))
+    else:
+        ID = request.form['id']
+        ControladorLocal().modificarUsuario(Usuario(tipo_id=1,nombre=nombre,clave=clave,habilitado=habilitado,id=ID))
     return redirect(url_for('personal'))
 
 

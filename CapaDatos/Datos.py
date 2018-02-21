@@ -59,3 +59,14 @@ class CatalogoUsuarios():
             return None
         else:
             return usr
+
+    def modificar_usuario(self,usr):
+        usrmod = Usuario.query.get(usr.getId())
+        usrmod.setNombre(usr.getNombre())
+        usrmod.setClave(usr.getClave())
+        usrmod.setHabilitado(usr.getHabilitado())
+        db.session.commit()
+
+    def eliminar_usuario(self,idpersonal):
+        Usuario.query.filter_by(id=idpersonal).delete()
+        db.session.commit()
