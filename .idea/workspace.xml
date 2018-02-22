@@ -51,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="informar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="informar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/informar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -111,6 +111,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InformadorProyecto.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="164" column="28" lean-forward="false" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+                <element signature="e#1049#1108#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cabecera.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -122,7 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>formularios</find>
       <find>monto</find>
       <find>error</find>
       <find>response</find>
@@ -152,6 +174,7 @@
       <find>dat</find>
       <find>fec</find>
       <find>fecha</find>
+      <find>nav-link text-primarySalir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,12 +199,12 @@
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/EmpleadosCabecera.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/EncargadoCabecera.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/InvitadoCabecera.html" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html" />
         <option value="$PROJECT_DIR$/CapaDatos/modelos.py" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/login.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/inicio.html" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html" />
       </list>
     </option>
   </component>
@@ -739,14 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CapaDatos/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -785,17 +800,6 @@
           <caret line="112" column="2" lean-forward="true" selection-start-line="112" selection-start-column="2" selection-end-line="113" selection-end-column="25" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2727">
-          <caret line="164" column="28" lean-forward="false" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-            <element signature="e#1049#1108#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -860,6 +864,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="164" column="28" lean-forward="false" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#1049#1108#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
           <folding />
         </state>
       </provider>

@@ -41,12 +41,13 @@
 
     </ul>
 
-        <ul class="navbar-nav ml-auto">
+        <div class="navbar-nav ml-auto">
         <li class="nav-item">
               {% if current_user.is_authenticated %}
-                  <li>Hi {{ current_user.nombre}}! </li><a href="{{ url_for('logout') }}">  Salir</a></li>
+                  <div><li class="navbar-brand ">Hi {{ current_user.nombre}}!   </li>
+                  <a class="nav-link text-primary" href="{{ url_for('logout') }}">  Salir</a></div>
                {% else %}
-                <a  class="nav-link" href="{{ url_for('login') }}">Ingresar</a>
+                <a  class="nav-link text-primary" href="{{ url_for('login') }}">Ingresar</a>
            {% endif %}
 
     </li>
