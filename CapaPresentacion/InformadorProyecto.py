@@ -5,7 +5,7 @@ from CapaDatos import config
 from flask_login import LoginManager,login_required,login_user,logout_user,current_user
 from CapaDatos.modelos import Usuario,Articulo, MovimientoStock,DetalleArticulo,Tipo_usuario
 from CapaNegocio.Logica import ControladorLocal
-from datetime import date
+from datetime import datetime
 import os
 
 app = Flask(__name__)
@@ -162,7 +162,7 @@ def formularioventas():
 def registrar_stock():
     detalles = ControladorLocal().getAllDetallesSinConfirmar()
     montototal = ControladorLocal().sumAllDetallesSinConfimrar()
-    fecha = date.today()
+    fecha = datetime.today()
     usuario = request.form['idusuario']
     movstock = MovimientoStock(fecha, montototal,id_usuario=usuario)
     id_generado = ControladorLocal().SetMovimientoStock(movstock)

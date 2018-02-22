@@ -100,7 +100,7 @@ class Articulo(db.Model):
 class MovimientoStock(db.Model):
     __tablename__= 'movimientostock'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    fecha = db.Column(db.Date, nullable=False)
+    fecha = db.Column(db.DateTime, nullable=False)
     id_usuario = db.Column(db.Integer,db.ForeignKey('usuarios.id'),nullable=False)
     movimiento_usuario_rel = db.relationship('Usuario',foreign_keys=id_usuario)
     monto_total = db.Column(db.Float, nullable=False)
