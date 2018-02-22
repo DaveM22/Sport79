@@ -32,7 +32,6 @@ class CatalogoArticulos():
         art.stock -= det.cantidad
         db.session.commit()
 
-
 class CatalogoStocks():
 
     def getAllMovimientosStock(self):
@@ -45,7 +44,6 @@ class CatalogoStocks():
 
     def sumVentasMontoTotales(self):
         return db.session.query(db.func.sum(DetalleArticulo.monto)).select_from(DetalleArticulo).scalar()
-
 
 class CatalogoDetalles():
     def getAllDetallesSinConfirmar(self):

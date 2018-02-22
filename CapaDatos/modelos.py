@@ -23,10 +23,6 @@ class Usuario(db.Model, UserMixin):
         self.tipo_id = tipo_id
         self.id = id
 
-
-    def setPassFalsa(self,clave):
-        self.clave = clave
-
     def setNombre(self,nombre):
         self.nombre = nombre
 
@@ -58,8 +54,6 @@ class Tipo_usuario(db.Model):
 
     def __init__(self,descripcion):
         self.descripcion = descripcion
-
-
 
 class Articulo(db.Model):
     __tablename__='articulos'
@@ -110,6 +104,25 @@ class Informe(db.Model):
         self.id_responsable = id_responsable
         self.fecha_hora = fecha_hora
         self.monto_total = monto_total
+
+    def getId_Responsable(self):
+        return self.id_responsable
+
+    def getFecha_Hora(self):
+        return self.fecha_hora
+
+    def getMonto_Total(self):
+        return self.monto_total
+
+    def setId_Responsable(self, id_responsable):
+        self.id_responsable=id_responsable
+
+    def setFecha_Hora(self, fecha_hora):
+        self.fecha_hora= fecha_hora
+
+    def setMonto_Total(self, monto_total):
+        self.monto_total= monto_total
+
 
 class MovimientoStock(db.Model):
     __tablename__= 'movimientostock'

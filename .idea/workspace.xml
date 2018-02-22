@@ -34,8 +34,8 @@
       <file leaf-file-name="InformadorProyecto.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="171" column="61" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
+            <state relative-caret-position="131">
+              <caret line="172" column="19" lean-forward="false" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -46,31 +46,50 @@
       <file leaf-file-name="Logica.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="1105">
+              <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modelos.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modelos.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="23" />
+            <state relative-caret-position="326">
+              <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#278#1367#0" expanded="false" />
+                <element signature="e#1403#1628#0" expanded="false" />
+                <element signature="e#1660#2645#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="informes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="informes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/informes.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="307">
               <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datos.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="68" column="22" lean-forward="false" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+              <folding>
+                <element signature="e#122#285#0" expanded="false" />
+                <element signature="e#318#1025#0" expanded="false" />
+                <element signature="e#1056#1409#0" expanded="false" />
+                <element signature="e#1441#2206#0" expanded="false" />
+                <element signature="e#2239#2893#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,10 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>admin</find>
-      <find>caja</find>
-      <find>Hi</find>
-      <find>H</find>
       <find>montos</find>
       <find>monto</find>
       <find>ventas</find>
@@ -124,8 +139,12 @@
       <find>datetime</find>
       <find>artic</find>
       <find>db.DateTime</find>
-      <find>today</find>
+      <find>informe_usuario_reltipo</find>
       <find>informe</find>
+      <find>tipo</find>
+      <find>catalo</find>
+      <find>today</find>
+      <find>catal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,12 +170,12 @@
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/caja.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html" />
-        <option value="$PROJECT_DIR$/CapaDatos/Datos.py" />
         <option value="$PROJECT_DIR$/CapaNegocio/Logica.py" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" />
-        <option value="$PROJECT_DIR$/CapaDatos/modelos.py" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/informes.html" />
+        <option value="$PROJECT_DIR$/CapaDatos/Datos.py" />
+        <option value="$PROJECT_DIR$/CapaDatos/modelos.py" />
       </list>
     </option>
   </component>
@@ -166,7 +185,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -346,7 +365,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -612,6 +631,9 @@
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#278#1367#0" expanded="false" />
+            <element signature="e#1403#1628#0" expanded="false" />
+            <element signature="e#1660#2645#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,24 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="171" column="61" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/ventas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -783,29 +787,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/informes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="172" column="19" lean-forward="false" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="20" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="68" column="22" lean-forward="false" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+          <folding>
+            <element signature="e#122#285#0" expanded="false" />
+            <element signature="e#318#1025#0" expanded="false" />
+            <element signature="e#1056#1409#0" expanded="false" />
+            <element signature="e#1441#2206#0" expanded="false" />
+            <element signature="e#2239#2893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#278#1367#0" expanded="false" />
+            <element signature="e#1403#1628#0" expanded="false" />
+            <element signature="e#1660#2645#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
