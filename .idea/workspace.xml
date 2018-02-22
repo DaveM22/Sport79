@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" line="54" />
+    <bookmark url="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" line="59" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9002a8b-1dae-48df-a241-5c381c7a4e98" name="Default" comment="" />
@@ -15,7 +15,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Sport79$modelos.coverage" NAME="modelos Coverage Results" MODIFIED="1519233013188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CapaDatos" />
-    <SUITE FILE_PATH="coverage/Sport79$Sport79.coverage" NAME="Sport79 Coverage Results" MODIFIED="1519246658168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Sport79$Sport79.coverage" NAME="Sport79 Coverage Results" MODIFIED="1519257597789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -31,22 +31,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="personal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/personal.html">
+      <file leaf-file-name="InformadorProyecto.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stock.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/stock.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="31" column="63" lean-forward="false" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="217">
+              <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+                <element signature="e#1045#1104#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,18 +47,18 @@
       <file leaf-file-name="Logica.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+            <state relative-caret-position="291">
+              <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Datos.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
+      <file leaf-file-name="FormularioVentas.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+            <state relative-caret-position="160">
+              <caret line="75" column="74" lean-forward="false" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -74,37 +67,29 @@
       <file leaf-file-name="modelos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="234">
+              <caret line="123" column="15" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/index.html">
+      <file leaf-file-name="personal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/personal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            <state relative-caret-position="122">
+              <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformadorProyecto.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
+      <file leaf-file-name="Datos.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#78#0" expanded="true" />
-                <element signature="e#743#800#0" expanded="false" />
-                <element signature="e#858#917#0" expanded="false" />
-                <element signature="e#969#1002#0" expanded="false" />
-                <element signature="e#1065#1672#0" expanded="false" />
-                <element signature="e#1714#1765#0" expanded="false" />
-                <element signature="e#1805#1935#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-13">
+              <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,14 +105,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
-      <find>inicio</find>
-      <find>inde</find>
-      <find>pagina</find>
       <find>movimient</find>
       <find>movimi</find>
       <find>movimien</find>
-      <find>cantidad</find>
       <find>tipo</find>
       <find>formularios</find>
       <find>monto</find>
@@ -140,7 +120,21 @@
       <find>modificar</find>
       <find>Modificar</find>
       <find>modo</find>
+      <find>Hi</find>
+      <find>cantidad</find>
+      <find>id</find>
+      <find>elimi</find>
+      <find>agregar</find>
+      <find>usr</find>
+      <find>descr</find>
+      <find>eliminarp</find>
+      <find>eliminarpe</find>
+      <find>eliminarde</find>
+      <find>subt</find>
+      <find>eliminar_a</find>
       <find>eliminar</find>
+      <find>eliminar_de</find>
+      <find>detalle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,21 +146,21 @@
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/informar.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioStock.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/articulos.html" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/inicio.html" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/login.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/informes.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioArticulos.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioPersonal.html" />
-        <option value="$PROJECT_DIR$/CapaDatos/modelos.py" />
-        <option value="$PROJECT_DIR$/CapaDatos/Datos.py" />
-        <option value="$PROJECT_DIR$/CapaNegocio/Logica.py" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/templates/personal.html" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/stock.html" />
-        <option value="$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" />
         <option value="$PROJECT_DIR$/CapaPresentacion/templates/index.html" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/templates/personal.html" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html" />
+        <option value="$PROJECT_DIR$/CapaDatos/modelos.py" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/templates/ventas.html" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py" />
+        <option value="$PROJECT_DIR$/CapaNegocio/Logica.py" />
+        <option value="$PROJECT_DIR$/CapaDatos/Datos.py" />
+        <option value="$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html" />
       </list>
     </option>
   </component>
@@ -265,7 +259,7 @@
   </component>
   <component name="RunManager" selected="Python.Sport79">
     <configuration name="FormularioPersonal.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Sport79/CapaPresentacion/templates/FormularioPersonal.html" />
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Sport79/CapaPresentacion/templates/index.html" />
+    <configuration name="personal.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Sport79/CapaPresentacion/templates/personal.html" />
     <configuration name="stock.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Sport79/CapaPresentacion/templates/stock.html" />
     <configuration name="ventas.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Sport79/CapaPresentacion/templates/ventas.html" />
     <configuration name="Sport79" type="PythonConfigurationType" factoryName="Python" singleton="true">
@@ -308,19 +302,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Sport79" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.stock.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.ventas.html" />
-      <item index="4" class="java.lang.String" itemvalue="Python.modelos" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.FormularioPersonal.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.stock.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.ventas.html" />
+      <item index="3" class="java.lang.String" itemvalue="Python.modelos" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.FormularioPersonal.html" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.personal.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.FormularioPersonal.html" />
-        <item index="1" class="java.lang.String" itemvalue="Python.modelos" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.ventas.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.stock.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.personal.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.FormularioPersonal.html" />
+        <item index="2" class="java.lang.String" itemvalue="Python.modelos" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.ventas.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.stock.html" />
       </list>
     </recent_temporary>
   </component>
@@ -359,16 +353,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18425196" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48828697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34150326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22385621" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13398694" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31535947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20196672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0075642965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -382,22 +377,22 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18425196" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18425196" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18425196" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25402635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34150326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40522876" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31535947" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.006051437" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -522,12 +517,7 @@
           <caret line="139" column="52" lean-forward="true" selection-start-line="139" selection-start-column="52" selection-end-line="139" selection-end-column="52" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <element signature="e#743#800#0" expanded="false" />
-            <element signature="e#858#917#0" expanded="false" />
-            <element signature="e#969#1002#0" expanded="false" />
-            <element signature="e#1065#1672#0" expanded="false" />
-            <element signature="e#1714#1765#0" expanded="false" />
-            <element signature="e#1805#1935#0" expanded="false" />
+            <element signature="e#1045#1104#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -620,6 +610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,33 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/inicio.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="61" lean-forward="false" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/ventas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -801,66 +769,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/cabecera.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        <state relative-caret-position="256">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/stock.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="31" column="63" lean-forward="false" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        <state relative-caret-position="17">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/personal.html">
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/ventas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="94">
+          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaNegocio/Logica.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CapaPresentacion/InformadorProyecto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+        <state relative-caret-position="217">
+          <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="20" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <element signature="e#743#800#0" expanded="false" />
-            <element signature="e#858#917#0" expanded="false" />
-            <element signature="e#969#1002#0" expanded="false" />
-            <element signature="e#1065#1672#0" expanded="false" />
-            <element signature="e#1714#1765#0" expanded="false" />
-            <element signature="e#1805#1935#0" expanded="false" />
+            <element signature="e#1045#1104#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/CapaDatos/modelos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        <state relative-caret-position="234">
+          <caret line="123" column="15" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/personal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaDatos/Datos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CapaPresentacion/templates/FormularioVentas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="75" column="74" lean-forward="false" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
           <folding />
         </state>
       </provider>

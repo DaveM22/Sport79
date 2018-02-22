@@ -8,11 +8,10 @@
 <div align="center"><h2>Historial Ventas</h2></div>
 
 <div align="right"><button><a href="{{ url_for('formularioventas') }}">Nueva Venta</a></button></div>
-<br>
 
 <div class="container-fluid">
-<div class="row">
-
+<div row="">
+</div>
     <table class="table table-sm table-dark table-hover">
     <thead>
         <tr>
@@ -27,7 +26,7 @@
             <tr>
             <td>{{ i.id }}</td>
             <td>{{ i.fecha }}</td>
-            <td></td>
+                <td>{{i.movimiento_usuario_rel.nombre  }}</td>
             <td>{{ i.monto_total }}</td>
             </tr>
         {% endfor %}
@@ -35,6 +34,5 @@
 </table>
 </div>
 
-</div>
 </body>
 </html>

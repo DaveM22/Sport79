@@ -20,6 +20,9 @@ class ControladorLocal():
     def eliminar_articulo(self,ideliminar):
         self.articulosdata.eliminar_articulo(ideliminar)
 
+    def eliminar_detalle(self,ideliminar):
+        self.detallesdata.eliminar_detalle(ideliminar)
+
     def getAllDetallesSinConfirmar(self):
         return self.detallesdata.getAllDetallesSinConfirmar()
 
@@ -43,3 +46,6 @@ class ControladorLocal():
 
     def validarLogin(self,usr,clave):
         return self.catusuarios.validar_login(usr,clave)
+
+    def eliminarDetallesPendientes(self):
+        self.detallesdata.eliminarDetallesPendientes()

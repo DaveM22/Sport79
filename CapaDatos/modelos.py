@@ -101,12 +101,20 @@ class MovimientoStock(db.Model):
     __tablename__= 'movimientostock'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     fecha = db.Column(db.Date, nullable=False)
+    id_usuario = db.Column(db.Integer,db.ForeignKey('usuarios.id'),nullable=False)
+    movimiento_usuario_rel = db.relationship('Usuario',foreign_keys=id_usuario)
     monto_total = db.Column(db.Float, nullable=False)
 
-    def __init__(self,fecha,monto_total):
+    def __init__(self,fecha,monto_total,id_usuario):
         self.fecha = fecha
         self.monto_total = monto_total
+        self.id_usuario = id_usuario
 
+    def getFecha(self):
+        return self.fecha
+
+    def getMontototal(self):
+        return self.monto_total
 
 class DetalleArticulo(db.Model):
     __tablename__ = 'detallearticulo'
@@ -116,7 +124,7 @@ class DetalleArticulo(db.Model):
     id_articulo = db.Column(db.Integer, db.ForeignKey('articulos.id'))
     detalle_usuario_rel = db.relationship('Usuario', foreign_keys=id_usuario,backref='usuarios', lazy=True)
     detalle_articulo_rel = db.relationship('Articulo', foreign_keys=id_articulo,backref='articulos', lazy=True)
-    detalle_movimientostock_rel = db.relationship('MovimientoStock', foreign_keys=id_movimientostock, backref='movimientostock', lazy=True)
+    detalle_movimientostock_rel = db.relationship('MovimientoStock', foreign_keys=id_movimientostock, backref='movimientos', lazy=True)
     monto = db.Column(db.Float, nullable=False)
 
 

@@ -12,6 +12,8 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
+        {%if current_user.is_authenticated  %}
+
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('prueba') }}">Informes</a>
       </li>
@@ -22,13 +24,19 @@
         <a class="nav-link" href="{{ url_for('stock') }}">Stock</a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('stock') }}">Informar</a>
+        <a class="nav-link" href="{{ url_for('stock') }}">Caja</a>
       </li>
         <li>
             <a class="nav-link" href="{{ url_for('ventas') }}">Ventas</a>
         </li>
-
-
+        {% else %}
+        <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="">Contacto</a>
+        </li>
+        {% endif %}
 
 
     </ul>
@@ -36,7 +44,7 @@
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
               {% if current_user.is_authenticated %}
-                  <li>Hi {{ current_user.nombre}}! </li> <a href="{{ url_for('logout') }}">Salir</a></li>
+                  <li>Hi {{ current_user.nombre}}! </li><a href="{{ url_for('logout') }}">  Salir</a></li>
                {% else %}
                 <a  class="nav-link" href="{{ url_for('login') }}">Ingresar</a>
            {% endif %}

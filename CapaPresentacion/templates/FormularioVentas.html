@@ -14,11 +14,12 @@
             <div class="form-group h-100">
             <label class="col-form-label" for="usuario" >Cargado por:</label>
             <input class="form-control mx-sm-3" id="usuario" type="" step="any" name="usuario" value="{{ current_user.nombre  }}" readonly />
+            <input id="idusuario" type="hidden" name="idusuario" value="{{ current_user.id }}">
 
             <label class="col-form-label" for="stock">Subtotal</label>
             <input class="form-control mx-sm-3" type="number" id="stock" min="0" name="stock" value="{{ montototal }}" readonly />
-            <input type="submit" class="btn btn-primary mx-sm-3" value="Finalizar" />
-            <a href="{{url_for('ventas')}}" class="btn btn-primary">Cancelar</a>
+            <input onclick="return confirm('¿Confirmar la compra?')" type="submit" class="btn btn-success mx-sm-3" value="Finalizar" />
+            <a href="{{url_for('cancelarventa')}}" class="btn btn-danger">Cancelar</a>
             </div>
 
         </form>
@@ -45,7 +46,7 @@
                         <td>{{ art.precio_unitario }}</td>
                         <form action="{{url_for('agregardetalle')}}" method="post" >
                             <td hidden><input type="text" name="id" value="{{ art.id }}"/></td>
-                            <td><input type="text" class="col-sm-2 col-md-6" name="cantidad"/></td>
+                            <td><input required type="text" class="col-sm-2 col-md-8" name="cantidad"/></td>
                             <td><input type="submit" class="btn btn-primary" value="Agregar"/></td>
                         </form>
                     </tr>
@@ -62,6 +63,7 @@
                     <th>Descripcion</th>
                     <th>Moneda</th>
                     <th>Subtotal</th>
+                    <th>X</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,6 +73,7 @@
 
                         <td>$</td>
                         <td>{{ i.monto }}</td>
+                        <td><a href="{{url_for('.eliminar_detalle',ID=i.id)}}">X</a></td>
                     </tr>
                 {% endfor %}
             </tbody>

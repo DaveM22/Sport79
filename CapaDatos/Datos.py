@@ -30,6 +30,8 @@ class CatalogoStocks():
         db.session.commit()
         return movstock.id
 
+
+
 class CatalogoDetalles():
     def getAllDetallesSinConfirmar(self):
         return DetalleArticulo.query.filter_by(id_movimientostock=0).all()
@@ -43,7 +45,11 @@ class CatalogoDetalles():
             det.id_movimientostock = id
         db.session.commit()
 
-    def eliminarDetallesPendientes(self,id):
+    def eliminar_detalle(self,ideliminar):
+        DetalleArticulo.query.filter_by(id=ideliminar).delete()
+        db.session.commit()
+
+    def eliminarDetallesPendientes(self):
         DetalleArticulo.query.filter_by(id_movimientostock=0).delete()
         db.session.commit()
 

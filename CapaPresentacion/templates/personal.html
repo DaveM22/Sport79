@@ -33,7 +33,6 @@
                     {{ 'Sin Especificar' if usr.usuario_tipo_rel is none else usr.usuario_tipo_rel.descripcion   }}
                 </td>
                 <td><a href="{{url_for('.formulariopersonal',ID=usr.id)}}">Modificar</a></td>
-                <td><a href="{{url_for('.formulariopersonal',ID=usr.id)}}">Eliminar</a></td>
                 <td><a onclick="return confirm('¿Confirmar eliminar el usuario seleccionado?')" href="{{ url_for('.eliminarpersonal',ID=usr.id)}}">Eliminar</a></td>
                 </tr>
             {% endfor %}
