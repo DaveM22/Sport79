@@ -161,3 +161,15 @@ class DetalleArticulo(db.Model):
         self.id_articulo = id_articulo
         self.monto = monto
         self.cantidad = cantidad
+
+    def getCantidad(self):
+        return self.cantidad
+
+    def getMonto(self):
+        return self.monto
+
+    def setCantidad(self, cant):
+        self.cantidad=cant
+
+    def setMonto(self, mont):
+        self.monto=mont
