@@ -1,7 +1,14 @@
-from CapaDatos.modelos import Articulo,MovimientoStock,DetalleArticulo,Usuario,db
+from CapaDatos.modelos import Articulo,MovimientoStock,DetalleArticulo,Usuario,db, Informe
+
+class CatalogoInformes():
+    def getall_informes(self):
+       return Informe.query.all()
+
+    def insertar_informes(self, informe):
+        db.session.add(informe)
+        db.session.commit()
 
 class CatalogoArticulos():
-
     def getall_articulos(self):
         return Articulo.query.all()
 
@@ -20,6 +27,12 @@ class CatalogoArticulos():
         Articulo.query.filter_by(id = ideliminar).delete()
         db.session.commit()
 
+    def descontar_stock(self,det):
+        art=Articulo.query.get(det.id_articulo)
+        art.stock -= det.cantidad
+        db.session.commit()
+
+
 class CatalogoStocks():
 
     def getAllMovimientosStock(self):
@@ -30,6 +43,8 @@ class CatalogoStocks():
         db.session.commit()
         return movstock.id
 
+    def sumVentasMontoTotales(self):
+        return db.session.query(db.func.sum(DetalleArticulo.monto)).select_from(DetalleArticulo).scalar()
 
 
 class CatalogoDetalles():
@@ -37,7 +52,7 @@ class CatalogoDetalles():
         return DetalleArticulo.query.filter_by(id_movimientostock=0).all()
 
     def sumDetallesSinConfimrar(self):
-        return db.session.query(db.func.sum(DetalleArticulo.monto)).select_from(DetalleArticulo).scalar()
+        return db.session.query(db.func.sum(DetalleArticulo.monto)).select_from(DetalleArticulo).filter_by(id_movimientostock=0).scalar()
 
     def asignarIDdetallesPendientes(self,id):
         detalles = self.getAllDetallesSinConfirmar()

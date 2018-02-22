@@ -15,16 +15,13 @@
         {%if current_user.is_authenticated  %}
 
       <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('prueba') }}">Informes</a>
+        <a class="nav-link" href="{{ url_for('informes') }}">Informes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('personal') }}">Personal</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url_for('stock') }}">Stock</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('stock') }}">Caja</a>
       </li>
         <li>
             <a class="nav-link" href="{{ url_for('ventas') }}">Ventas</a>

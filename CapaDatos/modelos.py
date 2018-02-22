@@ -1,8 +1,6 @@
 from flask_login import UserMixin
-
-
-
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime, date
 
 # create a new SQLAlchemy object
 db = SQLAlchemy()
@@ -18,12 +16,13 @@ class Usuario(db.Model, UserMixin):
     tipo_id = db.Column(db.Integer, db.ForeignKey('tipo_usuario.id'), nullable=False)
     usuario_tipo_rel = db.relationship('Tipo_usuario', foreign_keys=tipo_id)
 
-    def __init__(self,nombre,habilitado,tipo_id,clave=None,id=None):
+    def __init__(self,nombre,habilitado,clave,tipo_id,id=None):
         self.nombre = nombre
         self.clave = clave
         self.habilitado = habilitado
         self.tipo_id = tipo_id
         self.id = id
+
 
     def setPassFalsa(self,clave):
         self.clave = clave
@@ -96,6 +95,21 @@ class Articulo(db.Model):
     def setStock(self,stock):
         self.stock = stock
 
+    def modificarStock(self, cantidad):
+        self.stock-=cantidad
+
+class Informe(db.Model):
+    __tablename__ = 'informes'
+    id= db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id_responsable = db.Column(db.Integer, db.ForeignKey('usuarios.id'), nullable=False)
+    informe_usuario_rel=db.relationship('Usuario', foreign_keys=id_responsable)
+    fecha_hora = db.column(db.Date)
+    monto_total = db.Column(db.Float, nullable=False)
+
+    def __init__(self,id_responsable,fecha_hora, monto_total):
+        self.id_responsable = id_responsable
+        self.fecha_hora = fecha_hora
+        self.monto_total = monto_total
 
 class MovimientoStock(db.Model):
     __tablename__= 'movimientostock'
@@ -122,14 +136,15 @@ class DetalleArticulo(db.Model):
     id_movimientostock = db.Column(db.Integer, db.ForeignKey('movimientostock.id'))
     id_usuario = db.Column(db.Integer, db.ForeignKey('usuarios.id'))
     id_articulo = db.Column(db.Integer, db.ForeignKey('articulos.id'))
+    cantidad = db.Column(db.Integer, nullable=False)
     detalle_usuario_rel = db.relationship('Usuario', foreign_keys=id_usuario,backref='usuarios', lazy=True)
     detalle_articulo_rel = db.relationship('Articulo', foreign_keys=id_articulo,backref='articulos', lazy=True)
     detalle_movimientostock_rel = db.relationship('MovimientoStock', foreign_keys=id_movimientostock, backref='movimientos', lazy=True)
     monto = db.Column(db.Float, nullable=False)
 
 
-    def __init__(self, id_movimientostock, id_articulo, monto):
+    def __init__(self, id_movimientostock, id_articulo, monto,cantidad):
         self.id_movimientostock = id_movimientostock
         self.id_articulo = id_articulo
         self.monto = monto
-
+        self.cantidad = cantidad

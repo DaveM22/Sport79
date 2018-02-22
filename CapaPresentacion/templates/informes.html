@@ -17,11 +17,18 @@
          <thead>
          <th>ID</th>
          <th>Responsable</th>
-         <th>Fecha</th>
-         <th>Hora</th>
-         <th>Cierre</th>
          <th>Monto a informar</th>
          </thead>
+    <tbody>
+        {% for inf in informes %}
+            <tr>
+            <td>{{ inf.id }}</td>
+            <td>{{ inf.informe_usuario_rel.nombre}}</td>
+            <td>{{ inf.monto_total }}</td>
+
+            </tr>
+        {% endfor %}
+      </tbody>
      </table>
 </div>
 </body>

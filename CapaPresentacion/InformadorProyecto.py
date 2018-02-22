@@ -3,9 +3,9 @@ from CapaDatos.modelos import db
 from werkzeug.routing import Rule
 from CapaDatos import config
 from flask_login import LoginManager,login_required,login_user,logout_user,current_user
-from CapaDatos.modelos import Usuario,Articulo, MovimientoStock,DetalleArticulo,Tipo_usuario
+from CapaDatos.modelos import Usuario,Articulo, MovimientoStock,DetalleArticulo,Tipo_usuario, Informe
 from CapaNegocio.Logica import ControladorLocal
-from datetime import datetime
+from datetime import datetime,date
 import os
 
 app = Flask(__name__)
@@ -20,16 +20,17 @@ db.create_all(app=app)
 
 @app.route('/')
 def index():
-    db.session.add(Tipo_usuario('admin'))
+    db.session.add(Tipo_usuario('Administrador'))
     db.session.commit()
-    db.session.add(Usuario(nombre='admin',habilitado=True,clave='admin',tipo_id=1))
+    db.session.add(Usuario(nombre='admin',clave='admin',habilitado=True,tipo_id=1))
     db.session.commit()
     return render_template('index.html',pagina='inicio.html')
 
-@app.route('/Prueba')
+@app.route('/Informes')
 @login_required
-def prueba():
-    return render_template('index.html',pagina='informes.html')
+def informes():
+    informes=ControladorLocal().getall_informes()
+    return render_template('index.html',pagina='informes.html', informes=informes)
 
 @login_manager.user_loader
 def load_user(id):
@@ -147,8 +148,10 @@ def registrar_personal():
 @app.route('/Ventas')
 @login_required
 def ventas():
-    detalles = MovimientoStock.query.all()
-    return render_template('index.html', pagina='ventas.html', detalles=detalles)
+    detalles = ControladorLocal().getAllMovimientosStock()
+
+    montos = ControladorLocal().sumVentasMontoTotales()
+    return render_template('index.html', pagina='ventas.html', detalles=detalles , montos=montos)
 
 @app.route('/FormularioVentas',methods=['GET','POST'])
 def formularioventas():
@@ -161,14 +164,32 @@ def formularioventas():
 @login_required
 def registrar_stock():
     detalles = ControladorLocal().getAllDetallesSinConfirmar()
+    ControladorLocal().AjustarStock()
     montototal = ControladorLocal().sumAllDetallesSinConfimrar()
-    fecha = datetime.today()
+    fecha = date.today()
     usuario = request.form['idusuario']
     movstock = MovimientoStock(fecha, montototal,id_usuario=usuario)
     id_generado = ControladorLocal().SetMovimientoStock(movstock)
     ControladorLocal().asignarIDDetallesPendientes(id_generado)
     return redirect(url_for('formularioventas'))
 
+@app.route('/RegistrarInforme',methods=['GET','POST'])
+@login_required
+def registrar_informe():
+    monto_total=ControladorLocal().sumVentasMontoTotales()
+    fecha_hora = datetime.today()
+    inf = Informe(current_user.id, fecha_hora, monto_total)
+    ControladorLocal().insertar_informes(inf)
+    return redirect(url_for('informes'))
+
+
+@app.route('/Caja')
+@login_required
+def caja():
+    fecha = date
+    horario = datetime.now().strftime("%H:%M")
+    monto = ControladorLocal().sumVentasMontoTotales()
+    return render_template('index.html',pagina='caja.html',fecha=fecha,monto=monto,horario = horario)
 
 @app.route('/AgregarDetalle',methods=['GET','POST'])
 @login_required
@@ -177,7 +198,7 @@ def agregardetalle():
     cantidad = float(request.form['cantidad'])
     print(cantidad)
     precio = Articulo.query.get(id).precio_unitario
-    detalle = DetalleArticulo(0,id,precio * cantidad)
+    detalle = DetalleArticulo(0,id,precio * cantidad,cantidad)
     db.session.add(detalle)
     db.session.commit()
     return redirect(url_for('formularioventas'))
@@ -187,9 +208,6 @@ def agregardetalle():
 def cancelarventa():
     ControladorLocal().eliminarDetallesPendientes()
     return redirect(url_for('ventas'))
-
-
-
 
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True

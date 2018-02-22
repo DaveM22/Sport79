@@ -1,4 +1,4 @@
-from CapaDatos.Datos import CatalogoArticulos,CatalogoDetalles,CatalogoStocks,CatalogoUsuarios
+from CapaDatos.Datos import CatalogoArticulos,CatalogoDetalles,CatalogoStocks,CatalogoUsuarios, CatalogoInformes
 
 class ControladorLocal():
 
@@ -7,6 +7,13 @@ class ControladorLocal():
         self.detallesdata = CatalogoDetalles()
         self.movstockdata = CatalogoStocks()
         self.catusuarios = CatalogoUsuarios()
+        self.catinformes = CatalogoInformes()
+
+    def getall_informes(self):
+        return self.catinformes.getall_informes()
+
+    def insertar_informes(self,informe):
+        self.catinformes.insertar_informes(informe)
 
     def getall_articulos(self):
         return self.articulosdata.getall_articulos()
@@ -49,3 +56,21 @@ class ControladorLocal():
 
     def eliminarDetallesPendientes(self):
         self.detallesdata.eliminarDetallesPendientes()
+
+    def sumVentasMontoTotales(self):
+        return self.movstockdata.sumVentasMontoTotales()
+
+    def getAllMovimientosStock(self):
+        return self.movstockdata.getAllMovimientosStock()
+
+    def AjustarStock(self):
+        detalles = self.detallesdata.getAllDetallesSinConfirmar()
+        for det in detalles:
+            self.articulosdata.descontar_stock(det)
+
+
+
+
+
+
+
